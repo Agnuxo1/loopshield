@@ -126,3 +126,11 @@ marketing licence and the 10-year image/voice release (added).
 
 - Same config as E-ENG-02; `results/fuzz.json`. 1,544,139 events, 302,630 accepted, 1,241,509 rejected,
   42,585 urgent cases, 23,133 call-back requests, **0 violations**; evidence closure 3, decision closure 897.
+
+## E-PHI-03 — Linux replication on server-ia (2026-10-29)
+
+- server-ia CPU lane, job 8a8d1b5fa721403f (ticket 192), Debian, Python 3.13.5, same pinned packages
+  (presidio-analyzer 2.2.360, spaCy 3.8.7, en_core_web_lg 3.8.0, NumPy 2.2.6, pyarrow 21.0.0), same data file.
+- Every exposure, precision, partition and bootstrap value is **identical** to E-PHI-02; only latency differs
+  (Linux: v2 0.25 ms, Presidio 9.1 ms, hybrid 8.1 ms per note). Output `results/phi_linux/phi_results.json`.
+- GitHub Actions CI (Ubuntu, Python 3.12) on the public repo: 21 tests, demo, fuzz 5,000, simulation 2,000 × 3: all pass.
