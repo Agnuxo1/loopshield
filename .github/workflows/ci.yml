@@ -1,0 +1,15 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy==2.2.6 pytest==8.3.5
+      - run: python -m pytest -q tests
+      - run: python demo/run_demo.py
+      - run: python sim/fuzz.py --n 5000 --seed 0
+      - run: python sim/simulate.py --n 2000 --seeds 3 --out /tmp/sim

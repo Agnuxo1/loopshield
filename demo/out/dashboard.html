@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LoopShield board</title><style>
+    :root{--bg:#f6f7f9;--card:#fff;--ink:#16202a;--mut:#5b6b7a;--acc:#0b6e69;--bad:#b42318;--line:#e3e7ec}
+    @media (prefers-color-scheme:dark){:root{--bg:#0f1418;--card:#171e24;--ink:#e8eef3;--mut:#9aabb8;--acc:#3cc4b9;--bad:#ff6b5e;--line:#26313a}}
+    body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+    header{padding:22px 24px;border-bottom:1px solid var(--line)} h1{margin:0;font-size:22px} header p{margin:4px 0 0;color:var(--mut)}
+    main{max-width:1180px;margin:auto;padding:18px 16px 40px;display:grid;gap:16px}
+    .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+    .tile,.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+    .v{font-size:28px;font-weight:650;color:var(--acc)} .l{font-weight:600} .n{color:var(--mut);font-size:13px}
+    .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+    table{border-collapse:collapse;width:100%;font-size:14px} td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+    .bad{color:var(--bad);font-weight:650} .urg{color:var(--bad)} h2{font-size:16px;margin:0 0 10px}
+    pre{white-space:pre-wrap;background:var(--bg);padding:10px;border-radius:8px;font-size:12.5px;overflow:auto}
+    .ar{direction:rtl;text-align:right;font-size:16px} li.esc{color:var(--bad)} .scroll{overflow-x:auto}
+    footer{color:var(--mut);font-size:13px;text-align:center;padding:0 16px 30px}
+    </style></head><body>
+<header><h1>LoopShield — screening-to-care loop board</h1>
+<p>Positive FIT pathway · day 120 · 301 synthetic cases · every number on this page is computed by the engine</p></header>
+<main>
+<section class="tiles">
+<div class="tile"><div class="v">198</div><div class="l">Open actionable results</div><div class="n"></div></div>
+<div class="tile"><div class="v">99</div><div class="l">Overdue now</div><div class="n">past the SLA of their current step</div></div>
+<div class="tile"><div class="v">0</div><div class="l">Overdue with no alert raised</div><div class="n">silent loss; must be 0</div></div>
+<div class="tile"><div class="v">103</div><div class="l">Closed with evidence</div><div class="n">report + next step recorded</div></div>
+<div class="tile"><div class="v">45</div><div class="l">Median days to closure</div><div class="n"></div></div>
+<div class="tile"><div class="v">verified</div><div class="l">Audit chain</div><div class="n">2880 entries, SHA-256 linked</div></div>
+</section>
+<section class="grid2">
+<div class="card scroll"><h2>Work list by accountable owner</h2><table><tr><th>Owner</th><th>Open</th><th>Overdue</th><th>Urgent</th></tr><tr><td>gastroenterology</td><td>140</td><td class='bad'>49</td><td>0</td></tr><tr><td>primary_care</td><td>41</td><td class='bad'>34</td><td>0</td></tr><tr><td>screening_programme</td><td>17</td><td class='bad'>16</td><td>1</td></tr></table></div>
+<div class="card"><h2>One case, end to end (FIT-1206)</h2><ol><li><b>ISSUED</b> day 0.0</li><li><b>NOTIFIED</b> day 4.3</li><li><b>ACKNOWLEDGED</b> day 10.7</li><li><b>REFERRED</b> day 16.9</li><li><b>REFERRAL_ACCEPTED</b> day 23.5</li><li><b>BOOKED</b> day 27.1</li><li><b>ATTENDED</b> day 44.3</li><li><b>RESULTED</b> day 58.4</li><li><b>CLOSED</b> day 60.5</li><li class='esc'>escalated to owner at step RESULTED, day 58.3</li></ol></div>
+</section>
+<section class="card scroll"><h2>Most overdue (urgent first)</h2><table><tr><th>Case</th><th>State</th><th>Waiting for</th><th>Owner</th><th>Days overdue</th><th>Escalated to</th><th>Lang</th></tr><tr><td>FIT-1033</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>113</td><td>clinical_lead</td><td>en</td></tr><tr><td>FIT-1130</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>113</td><td>clinical_lead</td><td>en</td></tr><tr><td>FIT-1165</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>109</td><td>clinical_lead</td><td>ar</td></tr><tr><td>FIT-1197</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>109</td><td>clinical_lead</td><td>en</td></tr><tr><td>FIT-1184</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>107</td><td>clinical_lead</td><td>ar</td></tr><tr><td>FIT-1181</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>107</td><td>clinical_lead</td><td>ar</td></tr><tr><td>FIT-1256</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>101</td><td>clinical_lead</td><td>ar</td></tr><tr><td>FIT-1252</td><td>ACKNOWLEDGED</td><td>REFERRED</td><td>primary_care</td><td>100</td><td>clinical_lead</td><td>en</td></tr><tr><td>FIT-1123</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>96</td><td>clinical_lead</td><td>ar</td></tr><tr><td>FIT-1052</td><td>NOTIFIED</td><td>ACKNOWLEDGED</td><td>primary_care</td><td>96</td><td>clinical_lead</td><td>en</td></tr><tr><td>FIT-1067</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>93</td><td>clinical_lead</td><td>en</td></tr><tr><td>FIT-1268</td><td>ISSUED</td><td>NOTIFIED</td><td>screening_programme</td><td>92</td><td>clinical_lead</td><td>ar</td></tr></table></section>
+<section class="grid2">
+<div class="card"><h2>Patient message (English, deterministic template)</h2><p>Your bowel screening test (FIT) found a small amount of blood in the sample. This is a screening result, not a diagnosis: most people with this result do not have cancer, but a colonoscopy is needed to find the cause. Next step: please reply to confirm you have read this message. Responsible team: your family doctor. Reply 1 if you understood, 2 to ask for a call from the care team, 3 for another language.</p></div>
+<div class="card"><h2>Patient message (Arabic, urgent case; pending native review)</h2><p class="ar" lang="ar">أظهر فحص الكشف المبكر للأمعاء (فحص الدم الخفي في البراز) وجود كمية صغيرة من الدم في العينة. هذه نتيجة فحص كشف مبكر وليست تشخيصاً: معظم من تظهر لديهم هذه النتيجة لا يعانون من السرطان، لكن تنظير القولون ضروري لمعرفة السبب. الخطوة التالية: سيتواصل معك فريق الرعاية خلال أيام قليلة لشرح النتيجة. الفريق المسؤول: برنامج الكشف المبكر. أرسل 1 إذا فهمت الرسالة، أو 2 لتطلب اتصالاً من فريق الرعاية، أو 3 للتواصل بلغة أخرى. يرجى الاتصال بعيادتك اليوم. إذا شعرت بتوعك شديد، اتصل بالإسعاف (998).</p></div>
+</section>
+<section class="grid2">
+<div class="card"><h2>Clinician note (stays in the hospital)</h2><pre>Called Mr Omar Haddad on 2026-03-02 at +971 50 123 4567 about his FIT result; MRN 55120934. He works night shifts and asked for a weekend slot. BP 128/82 mmHg, on metformin 500 mg.</pre></div>
+<div class="card"><h2>What an external AI model would receive (NAVAJO v2)</h2><pre>Task: patient_message. Pathway: Positive faecal immunochemical test -&gt; diagnostic colonoscopy. Current step: NOTIFIED; next step: ACKNOWLEDGED. Urgent: no. Write for language &#x27;en&#x27;, plain words, say this is a screening result and not a diagnosis, give one next action and how to reply. Keep every [PHI_n] placeholder exactly as written.
+Clinician note (masked): Called Mr [PHI_1] on [PHI_2] at [PHI_3] about his FIT result; [PHI_4] He works night shifts and asked for a weekend slot. BP 128/82 mmHg, on metformin 500 mg.</pre><p class="n">4 values replaced by placeholders; mapping kept in memory and destroyed after the answer is restored.</p></div>
+</section>
+<section class="card scroll"><h2>FHIR R4 Task exported for the next provider</h2><pre>{
+ &quot;resourceType&quot;: &quot;Task&quot;,
+ &quot;id&quot;: &quot;loop-FIT-1206&quot;,
+ &quot;status&quot;: &quot;completed&quot;,
+ &quot;intent&quot;: &quot;order&quot;,
+ &quot;priority&quot;: &quot;routine&quot;,
+ &quot;code&quot;: {
+  &quot;text&quot;: &quot;Positive faecal immunochemical test -&gt; diagnostic colonoscopy&quot;
+ },
+ &quot;businessStatus&quot;: {
+  &quot;text&quot;: &quot;CLOSED&quot;
+ },
+ &quot;for&quot;: {
+  &quot;reference&quot;: &quot;Patient/pseudonymous&quot;
+ },
+ &quot;authoredOn&quot;: &quot;2026-01-01T10:28:04Z&quot;,
+ &quot;lastModified&quot;: &quot;2026-03-02T21:27:54Z&quot;,
+ &quot;owner&quot;: {
+  &quot;display&quot;: &quot;closed&quot;
+ },
+ &quot;output&quot;: [
+  {
+   &quot;type&quot;: {
+    &quot;text&quot;: &quot;kind&quot;
+   },
+   &quot;valueString&quot;: &quot;evidence&quot;
+  },
+  {
+   &quot;type&quot;: {
+    &quot;text&quot;: &quot;report_ref&quot;
+   },
+   &quot;valueString&quot;: &quot;COL-FIT-1206&quot;
+  },
+  {
+   &quot;type&quot;: {
+    &quot;text&quot;: &quot;next_step&quot;
+   },
+   &quot;valueString&quot;: &quot;routine screening 2 y&quot;
+  }
+ ]
+}</pre></section>
+</main><footer>Prototype · synthetic data · not a medical device · LoopShield 0.1 (MIT) built on Project NAVAJO</footer></body></html>

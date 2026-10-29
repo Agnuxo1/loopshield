@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+*.parquet
+demo/out/case_bundle.json
+results/phi/phi_rows.json
