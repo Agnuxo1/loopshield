@@ -1,0 +1,120 @@
+{
+ "meta": {
+  "docs": 251,
+  "domains": [
+   "healthcare",
+   "healthcare-administration"
+  ],
+  "python": "3.13.5",
+  "platform": "Linux-6.12.113+deb13-amd64-x86_64-with-glibc2.41",
+  "gateway_refusal_rate_v2": 0.00398406374501992,
+  "presidio-analyzer": "2.2.360",
+  "spacy": "3.8.7",
+  "en_core_web_lg": "3.8.0",
+  "numpy": "2.2.6",
+  "pyarrow": "21.0.0"
+ },
+ "systems": {
+  "raw": {
+   "E_exposure": 1.0,
+   "precision": 0.0,
+   "entities_fully_visible": 1.0,
+   "docs_with_full_visible_entity": 1.0,
+   "clinical_kept": 1.0,
+   "clinical_n": 33,
+   "docs": 251,
+   "phi_chars": 10239,
+   "E_partitions_mean": 1.0,
+   "E_partitions_sd": 0.0,
+   "ms_per_doc": 0.03190109966808848
+  },
+  "navajo_v1": {
+   "E_exposure": 0.2828401211055767,
+   "precision": 0.4437394247038917,
+   "entities_fully_visible": 0.1650763358778626,
+   "docs_with_full_visible_entity": 0.47808764940239046,
+   "clinical_kept": 0.9696969696969697,
+   "clinical_n": 33,
+   "docs": 251,
+   "phi_chars": 10239,
+   "E_partitions_mean": 0.28040717768640133,
+   "E_partitions_sd": 0.056678274970498,
+   "ms_per_doc": 0.14907725104798686
+  },
+  "navajo_v2": {
+   "E_exposure": 0.1291141713057916,
+   "precision": 0.8841844323252355,
+   "entities_fully_visible": 0.08874045801526717,
+   "docs_with_full_visible_entity": 0.21912350597609562,
+   "clinical_kept": 1.0,
+   "clinical_n": 33,
+   "docs": 251,
+   "phi_chars": 10239,
+   "E_partitions_mean": 0.1287500665923341,
+   "E_partitions_sd": 0.014825145369044395,
+   "ms_per_doc": 0.24970941441745842
+  },
+  "presidio": {
+   "E_exposure": 0.2283426115831624,
+   "precision": 0.8232049947970864,
+   "entities_fully_visible": 0.16698473282442747,
+   "docs_with_full_visible_entity": 0.49800796812749004,
+   "clinical_kept": 0.9090909090909091,
+   "clinical_n": 33,
+   "docs": 251,
+   "phi_chars": 10239,
+   "E_partitions_mean": 0.2272882907459155,
+   "E_partitions_sd": 0.021865602713734174,
+   "ms_per_doc": 9.064051270924612
+  },
+  "hybrid_v2+presidio": {
+   "E_exposure": 0.040824299247973435,
+   "precision": 0.8312336179927285,
+   "entities_fully_visible": 0.01812977099236641,
+   "docs_with_full_visible_entity": 0.06374501992031872,
+   "clinical_kept": 0.9090909090909091,
+   "clinical_n": 33,
+   "docs": 251,
+   "phi_chars": 10239,
+   "E_partitions_mean": 0.04018192278340368,
+   "E_partitions_sd": 0.012889371884391453,
+   "ms_per_doc": 8.084268916298104
+  }
+ },
+ "tests": {
+  "navajo_v2 - presidio": {
+   "diff": -0.09922844027737082,
+   "ci95_seeds_0_1_2": [
+    [
+     -0.1365079797914694,
+     -0.06504837868579748
+    ],
+    [
+     -0.13416270183398757,
+     -0.06717538518537193
+    ],
+    [
+     -0.13256071915938042,
+     -0.06530837550871985
+    ]
+   ]
+  },
+  "hybrid_v2+presidio - presidio": {
+   "diff": -0.18751831233518898,
+   "ci95_seeds_0_1_2": [
+    [
+     -0.21275097079361632,
+     -0.16319040068901156
+    ],
+    [
+     -0.2103090646502288,
+     -0.164596109110149
+    ],
+    [
+     -0.2116562370082115,
+     -0.1643403200710997
+    ]
+   ]
+  }
+ }
+}

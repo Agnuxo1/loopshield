@@ -11,3 +11,4 @@ E-SIM-03,2026-10-29,30-day reminders after the ladder close the gap,sim/simulate
 E-SIM-04,2026-10-29,v0.1 ladder leaves late open cases unalerted after day 60 (correct denominator),sim/simulate.py --ladder-only,pre-publication,0-9,share_late_open_no_alert_after_60 A2 S-low/S-high,0.330 / 0.829,negative; fixed by 30-day reminders
 E-SIM-04,2026-10-29,30-day reminders close the gap,sim/simulate.py,pre-publication,0-9,share_late_open_no_alert_after_60; escalations/case A2,0 ; 14.4 / 4.0,adopted
 E-ENG-03,2026-10-29,invariants hold after reply change,sim/fuzz.py --n 100000,pre-publication,0,invariant_violations,0,pass
+E-PHI-03,2026-10-29,Linux replication of E-PHI-02,server-ia job 8a8d1b5fa721403f,e6602cf,"0,1,2",E_v2-E_presidio,-0.0992 (identical),reproduced
