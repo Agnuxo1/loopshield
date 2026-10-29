@@ -1,0 +1,5 @@
+# engine, demo, tests: standard library only
+numpy==2.2.6        # simulation
+pytest==8.3.5       # tests
+# privacy benchmark only (bench/phi_payload.py):
+# presidio-analyzer==2.2.360 spacy==3.8.7 pyarrow==21.0.0 en_core_web_lg 3.8.0

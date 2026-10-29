@@ -1,0 +1,13 @@
+id,date,hypothesis,config,commit,seed,metric,value,decision
+E-ENG-01,2026-10-29,engine invariants hold under random events,sim/fuzz.py --n 100000,pre-publication,0,invariant_violations,0,pass
+E-SIM-01,2026-10-29,LoopShield raises 12-month colonoscopy completion vs usual care (S-low),sim/simulate.py --n 10000 --seeds 10,pre-publication,0-9,"diff_O1_pts_mean[p2.5,p97.5]","+4.76 [+1.51,+6.38]",benefit conditional on trial input
+E-SIM-01,2026-10-29,"same, S-high",sim/simulate.py,pre-publication,0-9,"diff_O1_pts_mean[p2.5,p97.5]","+1.97 [+1.12,+2.42]",benefit conditional on trial input
+E-SIM-01,2026-10-29,"reminders-only tracker (negative control), S-low / S-high",sim/simulate.py,pre-publication,0-9,diff_O1_pts_mean,-1.18 / -0.99 (CI includes 0),no effect
+E-PHI-01,2026-10-29,smoke without Presidio,bench/phi_payload.py --no-presidio,pre-publication,-,E_exposure_v2,0.1291,smoke only
+E-PHI-02,2026-10-29,NAVAJO v2 exposes less PHI than Presidio,bench/phi_payload.py,pre-publication,"0,1,2",E_v2-E_presidio [CI seed0],"-0.0992 [-0.1365,-0.0650]",H1 supported
+E-PHI-02,2026-10-29,hybrid v2+Presidio vs Presidio,bench/phi_payload.py,pre-publication,"0,1,2",E_hybrid-E_presidio [CI seed0],"-0.1875 [-0.2128,-0.1632]",max mode
+E-ENG-02,2026-10-29,"invariants (incl. urgent timing, call-backs) hold after every event",sim/fuzz.py --n 100000 per_engine=20,pre-publication,0,invariant_violations,0,pass (file superseded by E-ENG-03)
+E-SIM-03,2026-10-29,30-day reminders after the ladder close the gap,sim/simulate.py,pre-publication,0-9,share_late_open_no_alert_after_60; escalations/case A2,0 ; 14.4 (S-low) / 4.0 (S-high),adopted; alert burden reported
+E-SIM-04,2026-10-29,v0.1 ladder leaves late open cases unalerted after day 60 (correct denominator),sim/simulate.py --ladder-only,pre-publication,0-9,share_late_open_no_alert_after_60 A2 S-low/S-high,0.330 / 0.829,negative; fixed by 30-day reminders
+E-SIM-04,2026-10-29,30-day reminders close the gap,sim/simulate.py,pre-publication,0-9,share_late_open_no_alert_after_60; escalations/case A2,0 ; 14.4 / 4.0,adopted
+E-ENG-03,2026-10-29,invariants hold after reply change,sim/fuzz.py --n 100000,pre-publication,0,invariant_violations,0,pass

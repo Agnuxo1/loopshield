@@ -1,0 +1,10 @@
+LoopShield (c) 2026 Francisco Angulo de Lafuente, MIT licence.
+
+Vendored, same author, MIT: Project NAVAJO core (navajo-egp, vendor/navajo_egp) and the NAVAJO v2 detector with its
+frozen name lexicon (loopshield/navajo_v2.py, assets/lexicon_train.json) from
+https://github.com/Agnuxo1/edge-privacy-gateway at commit 1bea82740e6eeeef6711b6b2165963159a63dfbe.
+The lexicon was built from gold spans of NVIDIA Nemotron-PII train (CC BY 4.0, synthetic records).
+
+Benchmark data are not redistributed: Gretel gretel-pii-masking-en-v1 (Apache-2.0) is downloaded by the user.
+Microsoft Presidio (MIT), spaCy and en_core_web_lg (MIT) keep their own licences.
+All demo people, notes and numbers are synthetic.
