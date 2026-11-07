@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "LoopShield",
+  "url": "https://github.com/Agnuxo1/loopshield",
+  "license": "https://spdx.org/licenses/MIT",
+  "dateCreated": "2026-10-29",
+  "author": {
+    "@type": "Person",
+    "@id": "https://orcid.org/0009-0001-1634-7063",
+    "name": "Francisco Angulo de Lafuente",
+    "sameAs": [
+      "https://orcid.org/0009-0001-1634-7063",
+      "https://github.com/Agnuxo1",
+      "https://arxiv.org/a/angulodelafuente_f_1.html",
+      "https://scholar.google.com/citations?user=6nOpJ9IAAAAJ"
+    ]
+  }
+}

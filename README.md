@@ -208,7 +208,7 @@ Results: [results/phi/phi_results.json](results/phi/phi_results.json).
 
 Synthetic data only; no EHR, laboratory or messaging integration yet; effect sizes transferred from US studies; Arabic
 limited to message templates (no Arabic de-identification evaluated); NAVAJO masking reduces exposure but does not
-anonymise, and pseudonymised data remain personal data; FHIR output structurally tested only. Full list in
+anonymise, and pseudonymised data remain personal data; FHIR output validated against base R4 only (no local implementation guide). Full list in
 [docs/SUBMISSION.md](docs/SUBMISSION.md#8-assumptions-dependencies-and-limitations).
 
 ## Real-world applications
@@ -226,7 +226,7 @@ data-protection assessment and clinical sign-off.
 - **Audit and inspection.** A hash-chained record of every event, with an anchor hash held outside the log,
   is the kind of evidence an inspector can check without trusting the system that produced it [[12](#ref-12)].
 - **Hand-off between providers.** FHIR R4 Task, Communication and Provenance resources carry the case to the
-  next organisation [[14](#ref-14)]; the output is structurally tested, not yet exchanged with a live server.
+  next organisation [[14](#ref-14)]; the output passes the official HL7 validator against base R4 (10 scenarios, 0 errors, 0 warnings; E-FHIR-01), and has not yet been exchanged with a live server.
 - **Assistants without exposure.** If a model drafts the patient message, identifiers are replaced on the
   hospital machine first and the answer is restored there; under the GDPR the masked text is still personal
   data [[18](#ref-18)], so a processing agreement or a local model is still required.
@@ -276,9 +276,24 @@ delivery rather than only the record; a narrative-text detector evaluated on con
 de-identification and a native-speaker review of the templates; and a sandbox exchange of FHIR resources
 with a real server.
 
+<!-- author-background:start -->
+## Author background
+
+**Francisco Angulo de Lafuente**, independent AI researcher · [ORCID](https://orcid.org/0009-0001-1634-7063) · [arXiv](https://arxiv.org/a/angulodelafuente_f_1.html) · [Google Scholar](https://scholar.google.com/citations?user=6nOpJ9IAAAAJ) · [ResearchGate](https://www.researchgate.net/profile/Francisco-Angulo-Lafuente-3) · [Figshare](https://figshare.com/authors/Francisco_Angulo_de_Lafuente/22601234) · [Wikipedia](https://es.wikipedia.org/wiki/Francisco_Angulo_de_Lafuente)
+
+Earlier research at ECOFA focused on biotechnology for clean energy and on second-generation biofuels obtained by microbiological processing of organic waste. Two Spanish patents document that work:
+
+- **ES 2273594 B1**, *Process for obtaining fuels from organic waste*. Filed 5 September 2005, grant published 16 February 2008. [OEPM](https://www.oepm.es/pdf/ES/0000/000/02/27/35/ES-2273594_B1.pdf) · [Google Patents](https://patents.google.com/patent/ES2273594B1/en)
+- **ES 2341194 B1**, *Method for obtaining paraffin by a biological process with microorganisms from organic matter, and its refining for use as fuel*. Filed 11 September 2007, grant published 26 April 2011. Also published as EP2196519 and WO2009034217. [OEPM](https://www.oepm.es/pdf/ES/0000/000/02/34/11/ES-2341194_B1.pdf) · [Google Patents](https://patents.google.com/patent/ES2341194B1/en)
+
+These are historical publication and grant records under the inventor name Francisco Angulo Lafuente, and both have since lapsed. They are cited as evidence of a research trajectory and make no statement about current enforceability.
+<!-- author-background:end -->
+
 ## Licence
 
-MIT. See [NOTICE](NOTICE) for vendored components and data licences.
+MIT. See [NOTICE](NOTICE) for vendored components and data licences, [AUTHORS.md](AUTHORS.md) and [CITATION.cff](CITATION.cff) for authorship and citation, and [docs/AUTHOR_CONTEXT.md](docs/AUTHOR_CONTEXT.md) for author context.
+
+Copyright (c) 2026 Francisco Angulo de Lafuente. MIT License. Please preserve the original copyright and license notices and cite the original authors when using this research. Do not misrepresent authorship.
 
 ## Bibliography
 

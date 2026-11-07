@@ -101,6 +101,11 @@ AI drafting  ─► NAVAJO privacy gateway: identifiers masked on the hospital m
   [−13.7, −6.5]), **NAVAJO v2 + Presidio 4.1 %** (−18.8 [−21.3, −16.3]); precision 0.88 / 0.83; NAVAJO v2 runs in
   0.3 ms per note without any model. Details in `README.md` and `results/phi/phi_results.json`.
 
+- **Interoperability (E-FHIR-01):** official HL7 FHIR Validator 7.0.5, base R4, no terminology server (`-tx n/a`).
+  10 engine scenarios (2 pathways x open, overdue, urgent, closed with evidence, closed by decision): 0 errors,
+  0 warnings. Two deliberately broken control bundles were rejected. The first run failed on all 10 scenarios (missing
+  `fullUrl`); the exporter was fixed and both reports are kept in `results/fhir/`.
+
 ## 6. Scalability and deployment readiness
 
 - Pure Python standard library for the engine (NumPy only for simulation); 10,000 cases × 9 events processed in about
@@ -127,6 +132,19 @@ AI drafting  ─► NAVAJO privacy gateway: identifiers masked on the hospital m
   Project NAVAJO core and NAVAJO v2 detector vendored (MIT) from Agnuxo1/edge-privacy-gateway commit 1bea827.
 - Limitations: synthetic data only; no clinical users yet; no integration with a real EHR, laboratory or messaging
   gateway; Arabic is limited to message templates (no Arabic de-identification evaluated); escalation burden in
-  low-performing systems can be high and needs tuning; FHIR resources are structurally tested, not validated with the
-  official validator; NAVAJO v2 name detection depends on a lexicon built from English synthetic data.
+  low-performing systems can be high and needs tuning; FHIR bundles are validated against base R4 without a terminology
+  server, and no national or Abu Dhabi implementation guide has been tested; NAVAJO v2 name detection depends on a lexicon built from English synthetic data.
 - No data were provided by the organisers; all sources are public and declared (`docs/SOURCES.md`).
+
+## 9. Maturity and work during the Challenge
+
+- **Maturity now:** working prototype on synthetic data (engine, two pathways, patient messages, FHIR export, demo,
+  privacy gateway, simulation and benchmarks). No clinical users and no live integration.
+- **Built during the Challenge window (from 29 October 2026):** all of LoopShield, including its experiments.
+- **Existing work reused:** Project NAVAJO core and the NAVAJO v2 detector, by the same author (MIT), vendored from
+  Agnuxo1/edge-privacy-gateway commit 1bea827.
+- **Improved after the first release:** FHIR export now passes the official validator (section 5).
+- **Next, in priority order:** native-speaker and clinical review of the Arabic messages; inbound reply webhook and one
+  delivery channel; tuning of the escalation load in slow systems with clinical input.
+- **AI assistance:** the code and documents were developed with AI coding assistants under the author's direction;
+  the reported results come from the scripts in this repository and were audited in independent review rounds.

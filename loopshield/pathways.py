@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Francisco Angulo de Lafuente
+# SPDX-License-Identifier: MIT
+# Research-Project: LoopShield
+# Research-Author: Francisco Angulo de Lafuente
+# Research-ORCID: https://orcid.org/0009-0001-1634-7063
+# Research-Date: 2026-11-07
 """Care pathways: the ordered steps an actionable screening result must go through.
 
 Each step names the role that owns it and its service level (days allowed after the previous

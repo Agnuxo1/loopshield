@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Francisco Angulo de Lafuente
+# SPDX-License-Identifier: MIT
+# Research-Project: LoopShield
+# Research-Author: Francisco Angulo de Lafuente
+# Research-ORCID: https://orcid.org/0009-0001-1634-7063
+# Research-Date: 2026-11-07
 import json
 import os
 import random
@@ -151,6 +157,9 @@ def test_fhir_bundle_shape():
     assert kinds[0] == "Task" and "Communication" in kinds and kinds[-1] == "Provenance"
     comm = next(e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Communication")
     assert comm["status"] == "preparation" and "sent" not in comm
+    assert all(e["fullUrl"].endswith(f'/{e["resource"]["resourceType"]}/{e["resource"]["id"]}') for e in b["entry"])
+    assert len({e["fullUrl"] for e in b["entry"]}) == len(b["entry"])
+    assert all(e["resource"]["text"]["div"].startswith('<div xmlns="http://www.w3.org/1999/xhtml">') for e in b["entry"])
     json.dumps(b)
 
 

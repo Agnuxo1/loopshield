@@ -12,3 +12,5 @@ E-SIM-04,2026-10-29,v0.1 ladder leaves late open cases unalerted after day 60 (c
 E-SIM-04,2026-10-29,30-day reminders close the gap,sim/simulate.py,pre-publication,0-9,share_late_open_no_alert_after_60; escalations/case A2,0 ; 14.4 / 4.0,adopted
 E-ENG-03,2026-10-29,invariants hold after reply change,sim/fuzz.py --n 100000,pre-publication,0,invariant_violations,0,pass
 E-PHI-03,2026-10-29,Linux replication of E-PHI-02,server-ia job 8a8d1b5fa721403f,e6602cf,"0,1,2",E_v2-E_presidio,-0.0992 (identical),reproduced
+E-FHIR-01a,2026-11-07,exported bundles pass official R4 validator,validator_cli 7.0.5,d919de7,na,scenarios_with_errors,10/10,fail
+E-FHIR-01b,2026-11-07,after fullUrl and narrative fix,validator_cli 7.0.5,this commit,na,scenarios_with_errors,0/10 (controls rejected 2/2),pass

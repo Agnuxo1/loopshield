@@ -134,3 +134,14 @@ marketing licence and the 10-year image/voice release (added).
 - Every exposure, precision, partition and bootstrap value is **identical** to E-PHI-02; only latency differs
   (Linux: v2 0.25 ms, Presidio 9.1 ms, hybrid 8.1 ms per note). Output `results/phi_linux/phi_results.json`.
 - GitHub Actions CI (Ubuntu, Python 3.12) on the public repo: 21 tests, demo, fuzz 5,000, simulation 2,000 × 3: all pass.
+
+## E-FHIR-01 — official FHIR validation (2026-11-07)
+
+- Hypothesis and pass rule: pre-registered in `PREREGISTRO.md` before the first run.
+- Tool: HL7 FHIR Validator 7.0.5, `-version 4.0.1 -tx n/a`, on server-ia (`results/fhir/validator_version.txt`, jar SHA-256 in
+  `validator_sha256.txt`). No terminology server was used.
+- First run: **failed**. 10 of 10 scenarios had errors (6-15 each): Bundle entries lacked `fullUrl`; resources also had no
+  narrative (warnings). Report kept in `results/fhir/first_run_failed/`.
+- Fix: `loopshield/fhir.py` gives every resource an id, a `fullUrl` and a generated narrative; the unit test checks them.
+- Second run: **pass**. 10 of 10 scenarios with 0 errors and 0 warnings; broken controls rejected (2 and 1 errors).
+- Scope: base R4 only. No national or Abu Dhabi implementation guide, no exchange with a live server.

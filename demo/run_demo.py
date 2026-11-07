@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Francisco Angulo de Lafuente
+# SPDX-License-Identifier: MIT
+# Research-Project: LoopShield
+# Research-Author: Francisco Angulo de Lafuente
+# Research-ORCID: https://orcid.org/0009-0001-1634-7063
+# Research-Date: 2026-11-07
 """Offline demo: 300 synthetic positive-FIT cases run through the engine, rendered as one HTML board.
 
     python demo/run_demo.py            # writes demo/out/dashboard.html and demo/out/case_bundle.json

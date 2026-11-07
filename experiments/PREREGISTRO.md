@@ -79,3 +79,15 @@ Written 2026-10-29, before any experiment was run. Nothing below is changed afte
 
 No clinical effectiveness, no deployment, no regulatory status, no Arabic de-identification performance (Arabic is limited
 to patient message templates pending native-speaker and clinical review).
+
+## E-FHIR-01 design (added 2026-11-07, before any validator run)
+
+- Question: do the FHIR R4 bundles exported by `loopshield/fhir.py` pass the official HL7 FHIR Validator (base R4 profile)?
+- Inputs: `sim/export_fhir_samples.py` writes one bundle per scenario: both pathways, open, overdue with escalations,
+  urgent, closed with evidence, closed by a clinician's decision.
+- Metric: number of `error` and `fatal` issues per bundle; warnings are reported, not counted.
+- Control: two deliberately broken bundles (invalid Task status; Task without `intent`) must be rejected, otherwise the run
+  says nothing.
+- Pass = 0 errors on every scenario and at least 1 error on each broken bundle. On failure: fix the exporter, re-run, and
+  keep the first failing report in `results/fhir/`.
+- Not claimed: conformance to any national or Abu Dhabi implementation guide, or exchange with a real system.

@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Francisco Angulo de Lafuente
+# SPDX-License-Identifier: MIT
+# Research-Project: LoopShield
+# Research-Author: Francisco Angulo de Lafuente
+# Research-ORCID: https://orcid.org/0009-0001-1634-7063
+# Research-Date: 2026-11-07
 """NAVAJO-v2 detector: clinical-context layer on top of navajo_egp v1.
 
 Pure Python + regex, no model weights, runs on any CPU. Developed only on the

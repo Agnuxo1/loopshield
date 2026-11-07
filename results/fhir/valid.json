@@ -1,0 +1,790 @@
+{
+  "resourceType" : "Bundle",
+  "type" : "collection",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-dec*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-dec*/.output[0].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[0].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-dec*/.output[1].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[1].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-dec*/.output[2].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[2].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/fit_closed_decision.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-dec*/.businessStatus"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 33
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[0].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-dec*/.output[0].type"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 39
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[1].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-dec*/.output[1].type"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 45
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[2].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-dec*/.output[2].type"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-done*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-done*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-done*/.output[0].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[0].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-done*/.output[1].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[1].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-done*/.output[2].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[2].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/fit_closed_evidence.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-done*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-done*/.businessStatus"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 33
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[0].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-done*/.output[0].type"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 39
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[1].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-done*/.output[1].type"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 45
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[2].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-done*/.output[2].type"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-open*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-open*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/fit_open.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-open*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-open*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-late*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-late*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/fit_overdue.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-late*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-late*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-urgent*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-urgent*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/fit_urgent.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-urgent*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-urgent*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-dec*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-dec*/.output[0].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[0].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-dec*/.output[1].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[1].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-dec*/.output[2].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[2].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/mammogram_closed_decision.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-dec*/.businessStatus"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 33
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[0].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-dec*/.output[0].type"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 39
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[1].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-dec*/.output[1].type"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 45
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-dec*/.output[2].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-dec*/.output[2].type"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-done*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-done*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-done*/.output[0].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[0].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-done*/.output[1].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[1].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-done*/.output[2].type</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[2].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/mammogram_closed_evidence.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-done*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-done*/.businessStatus"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 33
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[0].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-done*/.output[0].type"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 39
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[1].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-done*/.output[1].type"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 45
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 8
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-done*/.output[2].type in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-done*/.output[2].type"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-open*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-open*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/mammogram_open.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-open*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-open*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-late*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-late*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/mammogram_overdue.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-late*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-late*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-urgent*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-urgent*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (25 hours old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "samples/valid/mammogram_urgent.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 6
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-urgent*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-urgent*/.businessStatus"]
+      }]
+    }
+  }]
+}

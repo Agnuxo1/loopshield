@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Francisco Angulo de Lafuente
+# SPDX-License-Identifier: MIT
+# Research-Project: LoopShield
+# Research-Author: Francisco Angulo de Lafuente
+# Research-ORCID: https://orcid.org/0009-0001-1634-7063
+# Research-Date: 2026-11-07
 """Privacy gateway: what may leave the hospital when LoopShield asks a language model for help.
 
 Built on Project NAVAJO (navajo-egp, MIT). Structured identifiers are never put in the prompt;
