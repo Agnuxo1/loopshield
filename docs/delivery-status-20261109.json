@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "project": "LoopShield",
+  "author": "Francisco Angulo de Lafuente",
+  "orcid": "0009-0001-1634-7063",
+  "event": "Future Health Digital Innovation Challenge",
+  "challenge": "05: Closing the Screening-to-Care Loop",
+  "date_observed": "2026-11-09",
+  "official_status_observed": "Submitted",
+  "evidence_source": "Entrant observation of the authenticated official submissions dashboard",
+  "judging_result": null,
+  "rank": null,
+  "award": null,
+  "individual_submission_id": null,
+  "reviewed_engine_commit": "e9d74fa0af5acf860ada35ae85a98bf11d780fa4",
+  "guest_demo_implementation_commit": "d53c1a3ba36c5cc1cd1019eb35893ea887e7cc1d",
+  "submitted_pdf": {
+    "filename": "loopshield-future-health-final.pdf",
+    "pages": 16,
+    "bytes": 488370,
+    "local_artifact_sha256": "02fdd558c1507281ef7f32bc703b8e6c2b5ecd547e1bf7806419e7ed312cee5c"
+  },
+  "demo_url": "https://agnuxo1.github.io/loopshield/",
+  "video_url": "https://huggingface.co/datasets/Agnuxo/loopshield-source-archive/blob/9b62de5e8a256394adac06b2899931e934788f26/loopshield-future-health-demo.mp4",
+  "video_sha256": "7526956a07cb3d1644c5abe26d25456b4ff9ea26a521fd8dc3eb71042b9936d9",
+  "authenticated_receipt": "Retained privately by the entrant"
+}
