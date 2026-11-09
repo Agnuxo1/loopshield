@@ -1,2 +1,3 @@
 # Preserve the exact validator input bytes covered by the server receipt SHA-256 values.
 results/robustness/fhir/input/**/*.json -text
+bench/robustness_checks.py -text
