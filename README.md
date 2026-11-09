@@ -93,6 +93,8 @@ this README says masking reduces exposure rather than removing it.
 
 ## Quick start
 
+Browse the [recorded synthetic demo](https://agnuxo1.github.io/loopshield/) without an account. It shows an engine-generated run; it sends no messages and connects to no clinical system. The runnable workflow is in the source below.
+
 <p align="center"><img src="docs/readme/07-quick-start.gif" alt="Terminal running the test suite, the demo and the 100,000-sequence fuzzer" width="100%"><br><sub>Fig. 7 — A real local run on CPU: the fuzz result is identical to the committed results/fuzz.json.</sub></p>
 
 ```bash
