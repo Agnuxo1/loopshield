@@ -1,0 +1,274 @@
+{
+  "resourceType" : "Bundle",
+  "type" : "collection",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-sha256-87b601ce69fb03c31733c248b20e2425*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-sha256-87b601ce69fb03c31733c248b20e2425*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (3 days old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-reassigned.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 10
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-sha256-87b601ce69fb03c31733c248b20e2425*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-sha256-87b601ce69fb03c31733c248b20e2425*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-sha256-3a8893bf21229195da31aab83e3a778a*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-sha256-3a8893bf21229195da31aab83e3a778a*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (3 days old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-reply.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 10
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-sha256-3a8893bf21229195da31aab83e3a778a*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-sha256-3a8893bf21229195da31aab83e3a778a*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-time-control*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-time-control*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (3 days old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-time.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 10
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-time-control*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-time-control*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-sha256-87b601ce69fb03c31733c248b20e2425*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-sha256-87b601ce69fb03c31733c248b20e2425*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (3 days old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-reassigned.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 10
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-sha256-87b601ce69fb03c31733c248b20e2425*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-sha256-87b601ce69fb03c31733c248b20e2425*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-sha256-3a8893bf21229195da31aab83e3a778a*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-sha256-3a8893bf21229195da31aab83e3a778a*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (3 days old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-reply.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 10
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-sha256-3a8893bf21229195da31aab83e3a778a*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-sha256-3a8893bf21229195da31aab83e3a778a*/.businessStatus"]
+      }]
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><p>All OK</p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Information</td><td>Bundle.entry[0].resource/*Task/loop-time-control*/.businessStatus</td><td>Invalid Code</td><td>Binding for path Bundle.entry[0].resource/*Task/loop-time-control*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked</td><td/><td>InstanceValidator</td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/validator-version",
+        "valueString" : "FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (3 days old)"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+        "valueString" : "/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-time.json"
+      }],
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+          "valueInteger" : 16
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+          "valueInteger" : 10
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+          "valueString" : "InstanceValidator"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueCode" : "Terminology_TX_Binding_NoSource"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+          "valueString" : "http://hl7.org/fhir/StructureDefinition/Task|4.0.1"
+        }],
+        "severity" : "information",
+        "code" : "code-invalid",
+        "details" : {
+          "text" : "Binding for path Bundle.entry[0].resource/*Task/loop-time-control*/.businessStatus in profile StructureDefinition[http://hl7.org/fhir/StructureDefinition/Task|4.0.1] has no source, so can't be checked"
+        },
+        "expression" : ["Bundle.entry[0].resource/*Task/loop-time-control*/.businessStatus"]
+      }]
+    }
+  }]
+}

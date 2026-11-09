@@ -97,7 +97,7 @@ this README says masking reduces exposure rather than removing it.
 
 ```bash
 pip install numpy==2.2.6 pytest==8.3.5
-python -m pytest -q tests              # 20 tests: engine rules, escalation, audit, privacy, messages, FHIR
+python -m pytest -q tests              # 32 cases: engine rules, escalation, audit, privacy, messages, FHIR
 python demo/run_demo.py                # 300 synthetic cases + 1 urgent -> demo/out/dashboard.html
 python sim/fuzz.py --n 100000          # engine invariants under random events
 python sim/simulate.py                 # pre-registered pathway simulation -> results/sim/
@@ -186,6 +186,18 @@ would have refused to send 1 of 251 notes (0.4 %) in default mode. Limits: one s
 documents were partly inspected (200) in the NAVAJO v2 project's exploratory pilot; small clinical-value sample; even the
 best mode leaves 4 % of PHI characters visible, so a data-processing agreement or a local model is still required.
 Results: [results/phi/phi_results.json](results/phi/phi_results.json).
+
+### 4. Targeted reliability audit (E-ROBUST-01, 9 November 2026)
+
+Three corrections improve handling of invalid timestamps and FHIR exports: the engine rejects non-finite time
+inputs before mutation; arbitrary synthetic case IDs receive valid bounded resource IDs; and timezone-aware origins
+retain the correct instant in UTC. On 26 targeted contract checks, the original version passed 4 and the corrected
+version passes all 26. These related checks are not a representative error-rate estimate. All 21 existing tests and
+11 new regression cases pass, and the ten existing FHIR scenario outputs retain identical hashes.
+
+The official HL7 FHIR Validator 7.0.5 (base R4, terminology disabled) reports zero errors and warnings on six new
+synthetic bundles; each of three deliberately broken controls reports errors. This establishes format conformance
+for these cases. [Protocol, measurements, failed attempts and limits](docs/RELIABILITY_AUDIT_20261109.md).
 
 ## Repository
 

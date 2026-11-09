@@ -20,7 +20,9 @@ from __future__ import annotations
 import hashlib
 import heapq
 import json
+import math
 from dataclasses import dataclass, field
+from numbers import Real
 
 from .pathways import Pathway
 
@@ -40,6 +42,18 @@ class TransitionError(ValueError):
     """An event that is not allowed in the case's current state; the case is not changed."""
 
 
+def _day_timestamp(value: Real) -> float:
+    if isinstance(value, bool) or not isinstance(value, Real):
+        raise TransitionError("time must be a finite numeric day timestamp")
+    try:
+        timestamp = float(value)
+    except (OverflowError, ValueError, TypeError) as exc:
+        raise TransitionError("time must be a finite numeric day timestamp") from exc
+    if not math.isfinite(timestamp):
+        raise TransitionError("time must be a finite numeric day timestamp")
+    return timestamp
+
+
 @dataclass
 class Case:
     case_id: str
@@ -57,6 +71,7 @@ class Case:
     closure: dict | None = None
     language: str = "en"
     urgent_at: float | None = None
+    urgent_escalation_index: int | None = None  # order boundary when multiple events share a timestamp
     callback_requested: bool = False
     replies: list = field(default_factory=list)
 
@@ -120,6 +135,7 @@ class CaseEngine:
     # ---- time -----------------------------------------------------------------------------
     def advance_to(self, t: float):
         """Fire every escalation due at or before t, in time order. Time never goes backwards."""
+        t = _day_timestamp(t)
         if t < self.now - 1e-9:
             raise TransitionError(f"time {t} is before the engine clock {self.now}; feed events in time order")
         while self._timers and self._timers[0][0] <= t:
@@ -164,6 +180,7 @@ class CaseEngine:
     # ---- lifecycle ------------------------------------------------------------------------
     def open_case(self, case_id: str, pathway: Pathway, t: float, language: str = "en",
                   urgent: bool = False) -> Case:
+        t = _day_timestamp(t)
         if case_id in self.cases:
             raise TransitionError(f"case {case_id} already exists")
         self.advance_to(t)
@@ -180,6 +197,7 @@ class CaseEngine:
 
     def apply(self, case_id: str, event: str, t: float, **data) -> Case:
         """Apply one event. Raises TransitionError (case unchanged) if the event is not allowed."""
+        t = _day_timestamp(t)
         self.advance_to(t)
         c = self.cases.get(case_id)
         if c is None:
@@ -251,9 +269,16 @@ class CaseEngine:
         return c
 
     def flag_urgent(self, case_id: str, t: float, by: str):
-        c = self.cases[case_id]
+        t = _day_timestamp(t)
+        c = self.cases.get(case_id)
+        if c is None:
+            raise TransitionError(f"unknown case {case_id}")
+        self.advance_to(t)
         if c.urgent or not c.open:
             return
+        # Chronological timers are recorded before the flag takes effect. The sequence boundary distinguishes
+        # those from later alerts even when a deadline and activation have exactly the same timestamp.
+        c.urgent_escalation_index = len(c.escalations)
         c.urgent = True
         c.urgent_at = t
         self.audit.write(t, case_id, "flag_urgent", {"by": by})
@@ -313,8 +338,10 @@ class CaseEngine:
         if c.urgent and not any(e["reason"] == "urgent" and e["to"] == c.pathway.escalation_ladder[-1]
                                 and e["t"] == c.urgent_at for e in c.escalations):
             bad.append(f"{c.case_id}: urgent but not escalated to the clinical lead at once")
-        if c.urgent and any(e["reason"] == "overdue" and e["to"] != c.pathway.escalation_ladder[-1]
-                            and e["t"] >= c.urgent_at for e in c.escalations):
+        urgent_start = c.urgent_escalation_index if c.urgent_escalation_index is not None else 0
+        if c.urgent and any(e["reason"] in {"overdue", "overdue_reminder"}
+                            and e["to"] != c.pathway.escalation_ladder[-1]
+                            for e in c.escalations[urgent_start:]):
             bad.append(f"{c.case_id}: urgent case escalated below the clinical lead")
         if c.callback_requested and not any(e["reason"] in {"callback_requested", "language_request"}
                                             for e in c.escalations):

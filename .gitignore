@@ -5,3 +5,8 @@ data/
 *.parquet
 demo/out/case_bundle.json
 results/phi/phi_rows.json
+results/robustness/fhir/validator_cli.jar
+results/robustness/fhir/*.tar.gz
+results/robustness/fhir/java-runtime/
+results/robustness/fhir/output*/
+results/robustness/fhir/receipts/

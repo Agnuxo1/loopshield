@@ -1,0 +1,16 @@
+{
+  "python": "3.13.7",
+  "numpy": "2.2.6",
+  "pytest": "8.3.5",
+  "platform": "Windows10x64",
+  "tests": {
+    "command": "python -m pytest -q tests",
+    "passed": 32
+  },
+  "fuzz": {
+    "sequences": 5000,
+    "events": 77382,
+    "violations": 0
+  },
+  "scope": "Compatibility smoke; synthetic data. Original large experiment outputs were preserved."
+}

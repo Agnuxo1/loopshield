@@ -1,0 +1,155 @@
+{
+  "protocol": "E-ROBUST-01",
+  "synthetic_only": true,
+  "implementation_file_sha256": {
+    "loopshield.engine": "bd8118d58386ed0ea6b7fcac062cb508d40b0ed07f796a89909a4b051289c9fd",
+    "loopshield.fhir": "b0c3512505e312647764dc900b68853063364b1fb28431f829e94fb3800e6121"
+  },
+  "measurement_file_sha256": "82c6a98fe965a96e21f3ef72a5b75dd16bfac2d28c1167fd0335fd0d481083be",
+  "total": 26,
+  "passed": 4,
+  "checks": [
+    {
+      "name": "open_rejects_nan",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "advance_rejects_nan",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "open_rejects_positive_infinity",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "advance_rejects_positive_infinity",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "open_rejects_negative_infinity",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "advance_rejects_negative_infinity",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "open_rejects_bool",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "advance_rejects_bool",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "open_rejects_string",
+      "pass": false,
+      "detail": "TypeError: '<' not supported between instances of 'str' and 'float'"
+    },
+    {
+      "name": "advance_rejects_string",
+      "pass": false,
+      "detail": "TypeError: '<' not supported between instances of 'str' and 'float'"
+    },
+    {
+      "name": "open_rejects_none",
+      "pass": false,
+      "detail": "TypeError: '<' not supported between instances of 'NoneType' and 'float'"
+    },
+    {
+      "name": "advance_rejects_none",
+      "pass": false,
+      "detail": "TypeError: '<' not supported between instances of 'NoneType' and 'float'"
+    },
+    {
+      "name": "apply_rejects_nan_without_mutation",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "urgent_rejects_nan_without_mutation",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "direct_urgent_rejects_past_time",
+      "pass": false,
+      "detail": "AssertionError: invalid timestamp accepted"
+    },
+    {
+      "name": "finite_chronological_control",
+      "pass": true,
+      "detail": "finite chronological control succeeds"
+    },
+    {
+      "name": "fhir_case_id_0",
+      "pass": true,
+      "detail": "bounded IDs, stable references and deterministic export"
+    },
+    {
+      "name": "fhir_case_id_1",
+      "pass": false,
+      "detail": "AssertionError: invalid FHIR id"
+    },
+    {
+      "name": "fhir_case_id_2",
+      "pass": false,
+      "detail": "AssertionError: invalid FHIR id"
+    },
+    {
+      "name": "fhir_case_id_3",
+      "pass": false,
+      "detail": "AssertionError: invalid FHIR id"
+    },
+    {
+      "name": "fhir_case_id_4",
+      "pass": false,
+      "detail": "AssertionError: invalid FHIR id"
+    },
+    {
+      "name": "fhir_case_id_5",
+      "pass": true,
+      "detail": "bounded IDs, stable references and deterministic export"
+    },
+    {
+      "name": "distinct_test_case_ids",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "fhir_origin_offset_0",
+      "pass": false,
+      "detail": "AssertionError: 2026-01-01T12:00:00+00:00Z"
+    },
+    {
+      "name": "fhir_origin_offset_330",
+      "pass": false,
+      "detail": "AssertionError: 2026-01-01T12:00:00+05:30Z"
+    },
+    {
+      "name": "fhir_origin_offset_-420",
+      "pass": false,
+      "detail": "AssertionError: 2026-01-01T12:00:00-07:00Z"
+    }
+  ],
+  "default_scenario_sha256": {
+    "fit_open": "fba6010900323585c9b6d5c3e20e7e89638b8025e2dda13519f012ba9ee38f3a",
+    "fit_overdue": "6d4c45ba2497899b8506f0cc37c242d8a669284909384117821d58a8db782d2e",
+    "fit_urgent": "c6cab55195b8ad0de98a9632ab2e6eae56280f57be028d836e6903135ebe35c5",
+    "fit_closed_evidence": "26d423ec8c38e4218019b2ca9c2a8a2423bff6db873c72f9e445cedb5f52fbae",
+    "fit_closed_decision": "9f3d47ec578b3874f5e0f09caa95a086ec588da0a820faf5cbc764a1a4af491c",
+    "mammogram_open": "521c385f3b1e169bf4119ec81fb4bc0c44693edb77208408c28db6b42ed35c85",
+    "mammogram_overdue": "8e5668e3e7e5289f09c6df27f20ca6f1eb280b075724c6282ba97305edb06352",
+    "mammogram_urgent": "83c9a4cdd0f49ae8b7c225d394ffaf41c31233b1382e19557e51c7690cf3ab3e",
+    "mammogram_closed_evidence": "5b0117370cb0e6dd7e87b5821f359f757127cfcb4714355011feba7402a091f9",
+    "mammogram_closed_decision": "b24309770bdee48f0903fe23047dd94f5501c75591338adf0da47c0cef02613b"
+  }
+}

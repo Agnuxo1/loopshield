@@ -10,11 +10,12 @@ import copy
 import datetime as dt
 import hashlib
 import json
+import os
 import pathlib
 import re
 import sys
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+sys.path.insert(0, os.environ.get("LOOPSHIELD_CHECK_SOURCE_ROOT", str(pathlib.Path(__file__).resolve().parents[1])))
 from loopshield import CaseEngine, FIT_POSITIVE, TransitionError
 from loopshield.fhir import case_bundle
 from sim.export_fhir_samples import scenarios
@@ -35,7 +36,10 @@ def run_checks():
         eng = CaseEngine()
         if populated:
             eng.open_case("synthetic", FIT_POSITIVE, 0.0)
-        before = copy.deepcopy(eng.__dict__)
+        def snapshot():
+            # AuditLog has identity equality: compare its fields, not a deep-copied object identity.
+            return copy.deepcopy({**eng.__dict__, "audit": eng.audit.__dict__})
+        before = snapshot()
         try:
             if operation == "open":
                 eng.open_case("new", FIT_POSITIVE, value)
@@ -46,7 +50,7 @@ def run_checks():
             else:
                 eng.flag_urgent("synthetic", value, by="synthetic reviewer")
         except TransitionError:
-            assert eng.__dict__ == before, "rejection changed engine state"
+            assert snapshot() == before, "rejection changed engine state"
             return "TransitionError; state unchanged"
         raise AssertionError("invalid timestamp accepted")
 
@@ -112,7 +116,11 @@ def run_checks():
         record(f"fhir_origin_offset_{offset}", lambda off=offset: time_check(off))
     default_scenarios = {name: hashlib.sha256(json.dumps(bundle, sort_keys=True).encode()).hexdigest()
                          for name, bundle in scenarios().items()}
+    implementation_hashes = {name: hashlib.sha256(pathlib.Path(sys.modules[name].__file__).read_bytes()).hexdigest()
+                             for name in ("loopshield.engine", "loopshield.fhir")}
     return {"protocol": "E-ROBUST-01", "synthetic_only": True,
+            "implementation_file_sha256": implementation_hashes,
+            "measurement_file_sha256": hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest(),
             "total": len(checks), "passed": sum(c["pass"] for c in checks),
             "checks": checks, "default_scenario_sha256": default_scenarios}
 

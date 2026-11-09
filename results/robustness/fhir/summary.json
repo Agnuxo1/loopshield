@@ -1,0 +1,77 @@
+{
+  "validator": "7.0.5",
+  "fhir": "4.0.1",
+  "terminology": "disabled (-tx n/a)",
+  "jar_sha256": "9dfe9f305b0f9389eceade2a4a1c9a2740d7b0e614066fdf07a78b571c76d92f",
+  "runtime": "21.0.13+9.0.LTS",
+  "groups": {
+    "valid": {
+      "exit_code": 0,
+      "inputs": {
+        "breast-birads0-reassigned.json": "63268fb459f520529cb43bdf89ef82d6a9fb723029763987cd909658c6d79db1",
+        "breast-birads0-reply.json": "c0c25dc011fc0b57eef66e5bb44ac9d5df810a1a424930fab2df69391a8a0d87",
+        "breast-birads0-time.json": "22d69c461603825c923ff028a81abb1ca37142e1fed06cab0569f34e514df06a",
+        "crc-fit-positive-reassigned.json": "0f6a8307395c5e1d6c5405682d5891f8faa77234bdf2df07ead655261e933f79",
+        "crc-fit-positive-reply.json": "54fbd6aa2df3cce2216ce7b18d66fbd39d9bf05afb854c3b1712323dbd4d5114",
+        "crc-fit-positive-time.json": "a6488904e41cc93c38ad4c6d754fcc1b3a7bad6442cd49a500437f899158f85b"
+      },
+      "outcomes": [
+        {
+          "fatal": 0,
+          "error": 0,
+          "warning": 0
+        },
+        {
+          "fatal": 0,
+          "error": 0,
+          "warning": 0
+        },
+        {
+          "fatal": 0,
+          "error": 0,
+          "warning": 0
+        },
+        {
+          "fatal": 0,
+          "error": 0,
+          "warning": 0
+        },
+        {
+          "fatal": 0,
+          "error": 0,
+          "warning": 0
+        },
+        {
+          "fatal": 0,
+          "error": 0,
+          "warning": 0
+        }
+      ]
+    },
+    "broken": {
+      "exit_code": 0,
+      "inputs": {
+        "bad_id.json": "dd538fc59ae7ad1369cee4f823bf98b94cbc97183ecb3d9c9c1b570cf2efc9ab",
+        "bad_time.json": "cf90a0169caa2e6c7113dd79083e1508477b181606dab55b3474b8b3d7faf3a4",
+        "missing_intent.json": "183f718b182c68c7145255209d571699a2ee3822f385339609a9da69e214c40e"
+      },
+      "outcomes": [
+        {
+          "fatal": 0,
+          "error": 2,
+          "warning": 0
+        },
+        {
+          "fatal": 0,
+          "error": 2,
+          "warning": 0
+        },
+        {
+          "fatal": 0,
+          "error": 1,
+          "warning": 0
+        }
+      ]
+    }
+  }
+}

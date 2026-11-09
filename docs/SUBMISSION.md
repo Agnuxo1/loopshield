@@ -106,6 +106,14 @@ AI drafting  ─► NAVAJO privacy gateway: identifiers masked on the hospital m
   0 warnings. Two deliberately broken control bundles were rejected. The first run failed on all 10 scenarios (missing
   `fullUrl`); the exporter was fixed and both reports are kept in `results/fhir/`.
 
+- **Reliability (E-ROBUST-01, 9 November):** a targeted audit reproduced and fixed three implementation defects:
+  non-finite engine timestamps, invalid FHIR IDs for nonstandard case identifiers, and incorrect formatting of
+  timezone-aware datetime origins. The same 26 synthetic contract checks improve from 4 passing on baseline
+  `19cb775` to all 26 passing; 32 regression cases pass, including all 21 existing tests. The ten existing default
+  FHIR scenario hashes remain identical. Official Validator 7.0.5, base R4 with terminology disabled, reports zero
+  errors and warnings on six additional bundles (two pathways x callback, reassignment and timezone cases), and
+  reports errors on all three deliberately broken controls. [Audit, raw evidence and measurement corrections](RELIABILITY_AUDIT_20261109.md).
+
 ## 6. Scalability and deployment readiness
 
 - Pure Python standard library for the engine (NumPy only for simulation); 10,000 cases × 9 events processed in about
@@ -144,6 +152,8 @@ AI drafting  ─► NAVAJO privacy gateway: identifiers masked on the hospital m
 - **Existing work reused:** Project NAVAJO core and the NAVAJO v2 detector, by the same author (MIT), vendored from
   Agnuxo1/edge-privacy-gateway commit 1bea827.
 - **Improved after the first release:** FHIR export now passes the official validator (section 5).
+- **Improved on 9 November:** bounded FHIR identifiers, UTC-aware timestamp export and engine input validation,
+  with prospective targeted checks and the existing-output compatibility control (E-ROBUST-01, section 5).
 - **Next, in priority order:** native-speaker and clinical review of the Arabic messages; inbound reply webhook and one
   delivery channel; tuning of the escalation load in slow systems with clinical input.
 - **AI assistance:** the code and documents were developed with AI coding assistants under the author's direction;

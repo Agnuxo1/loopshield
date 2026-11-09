@@ -1,0 +1,12 @@
+{
+ "sequences": 5000,
+ "events": 77382,
+ "accepted": 15180,
+ "rejected": 62202,
+ "violations": 0,
+ "closed_evidence": 0,
+ "closed_decision": 51,
+ "urgent": 2153,
+ "callbacks": 1164,
+ "examples": []
+}

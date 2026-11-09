@@ -1,0 +1,38 @@
+FHIR Validation tool Version 7.0.5 (Git# 17db3661806b). Built 2026-11-05T23:27:05.236Z (3 days old)
+  Java:   21.0.13 from /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/java-runtime/jdk-21.0.13+9-jre on amd64 (64bit). 1024MB available
+  Paths:  Current = /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu, Package Cache = /home/ai/.fhir/packages
+  Params: /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-reassigned.json /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-reply.json /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-time.json /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-reassigned.json /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-reply.json /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-time.json -version 4.0.1 -tx n/a -output /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/output-v3/valid.json
+  Locale: /
+  Jurisdiction: None specified (locale = )
+  Note that exceptions and validation failures may happen in the absence of a locale
+Loading
+  Loading FHIR v4.0.1 from hl7.fhir.r4.core#4.0.1
+  Load hl7.terminology.r4#6.2.0 - 4288 resources (00:03.590)
+  Load hl7.fhir.uv.extensions.r4#5.2.0 - 759 resources (00:00.620)
+  Loaded FHIR - 8265 resources (00:00.000)
+  Terminology Cache at /tmp/default-tx-cache/r4
+  Terminology server null - Version n/a: No Terminology Server (00:00.002)
+  Load hl7.terminology#7.5.0 - 4190 resources (00:00.898)
+  Load hl7.terminology.r5#7.5.0 - 4190 resources (00:00.270)
+  Load hl7.fhir.uv.extensions#5.4.0 - 885 resources (00:00.425)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.1.0, hl7.terminology.r4#6.2.0, hl7.fhir.uv.extensions.r4#5.2.0, hl7.terminology#7.5.0, hl7.terminology.r5#7.5.0, hl7.fhir.uv.extensions#5.4.0]
+  Get set... 
+  ...go! (00:00.698)
+Cached new session. Cache size = 1
+Sources to validate: /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-reassigned.json/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-reply.json/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-time.json/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-reassigned.json/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-reply.json/home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-time.json
+Validating
+  Validate /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-reassigned.json
+ 00:00.176
+  Validate /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-reply.json
+ 00:00.043
+  Validate /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/breast-birads0-time.json
+ 00:00.034
+  Validate /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-reassigned.json
+ 00:00.028
+  Validate /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-reply.json
+ 00:00.030
+  Validate /home/ai/pc/d/PROJECTS/.cognition/future-health-rescue-20261109/fhir-cpu/input/valid/crc-fit-positive-time.json
+ 00:00.023
+Done. Times: Loading: 00:06.555, validation: 00:00.338 (#6). Memory = 442Mb
+
+Done. Times: Loading: 00:06.555, validation: 00:00.338 (#6). Max Memory = 1024Mb

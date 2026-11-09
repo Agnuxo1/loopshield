@@ -145,3 +145,22 @@ marketing licence and the 10-year image/voice release (added).
 - Fix: `loopshield/fhir.py` gives every resource an id, a `fullUrl` and a generated narrative; the unit test checks them.
 - Second run: **pass**. 10 of 10 scenarios with 0 errors and 0 warnings; broken controls rejected (2 and 1 errors).
 - Scope: base R4 only. No national or Abu Dhabi implementation guide, no exchange with a live server.
+
+## E-ROBUST-01 — targeted reliability audit (2026-11-09)
+
+- Baseline public source19cb775;21 existing tests passed before changes. Protocol and initial harness committed71ca253
+  before corrections. Targeted, code-informed engineering checks; no blinded clinical study or population error-rate claim.
+- Same corrected measurement script: baseline4/26, corrected26/26;32 regression cases pass (21 existing +11 new).
+  Ten existing FHIR scenario hashes remain identical. Raw baseline/candidate files include source and measurement SHA-256.
+- Corrected finite-clock rejection, chronological direct urgent flags, bounded FHIR IDs/references for nonstandard case IDs,
+  and UTC formatting for aware origins. No new transport, clinical decision or anonymisation claim.
+- Official HL7 Validator7.0.5 SHA9dfe9f305b0f9389eceade2a4a1c9a2740d7b0e614066fdf07a78b571c76d92f,
+  R4 4.0.1, -tx n/a, Debian CPU/isolated Temurin21.0.13+9: six new unique synthetic bundles,0errors/0warnings each;
+  three broken controls report2,2,1errors. Process exit code alone is not an acceptance gate.
+- Preserved negative attempts: initial harness used AuditLog object identity for mutation comparison (corrected and both
+  sources rerun); first server run had no Java; second counted bridge backup inputs (12/6 instead of6/3), so count gate
+  failed. Final run uses an explicit JSON input list and exact counts. Nine downloaded input hashes match server receipt.
+- Full analysis and limits: docs/RELIABILITY_AUDIT_20261109.md. Raw evidence: results/robustness/.
+- Independent review reproduced counts/hashes and found an urgency/deadline tie regression plus inherited subsecond
+  truncation. Corrected using chronological event order with an explicit activation-sequence boundary (JEV0.94),
+  preserving microseconds, normalising supported real inputs and adding deadline±epsilon/equal-time fault controls.

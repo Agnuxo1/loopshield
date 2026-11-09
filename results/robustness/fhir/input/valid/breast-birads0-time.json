@@ -1,0 +1,63 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://loopshield.example.org/fhir/Task/loop-time-control",
+      "resource": {
+        "resourceType": "Task",
+        "id": "loop-time-control",
+        "status": "accepted",
+        "intent": "order",
+        "priority": "routine",
+        "code": {
+          "text": "Abnormal screening mammogram (recall) -> diagnostic imaging"
+        },
+        "businessStatus": {
+          "text": "ACKNOWLEDGED"
+        },
+        "for": {
+          "reference": "Patient/pseudonymous"
+        },
+        "authoredOn": "2026-01-01T19:00:00Z",
+        "lastModified": "2026-01-02T19:00:00Z",
+        "owner": {
+          "display": "screening_programme"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Abnormal screening mammogram (recall) -&gt; diagnostic imaging: ACKNOWLEDGED</div>"
+        },
+        "restriction": {
+          "period": {
+            "end": "2026-01-05T19:00:00Z"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://loopshield.example.org/fhir/Provenance/loop-time-control-provenance",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "loop-time-control-provenance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Recorded by the LoopShield engine</div>"
+        },
+        "target": [
+          {
+            "reference": "Task/loop-time-control"
+          }
+        ],
+        "recorded": "2026-01-02T19:00:00Z",
+        "agent": [
+          {
+            "who": {
+              "display": "LoopShield engine"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

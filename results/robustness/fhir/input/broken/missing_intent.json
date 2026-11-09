@@ -1,0 +1,94 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://loopshield.example.org/fhir/Task/loop-sha256-3a8893bf21229195da31aab83e3a778a",
+      "resource": {
+        "resourceType": "Task",
+        "id": "loop-sha256-3a8893bf21229195da31aab83e3a778a",
+        "status": "requested",
+        "priority": "routine",
+        "code": {
+          "text": "Positive faecal immunochemical test -> diagnostic colonoscopy"
+        },
+        "businessStatus": {
+          "text": "ISSUED"
+        },
+        "for": {
+          "reference": "Patient/pseudonymous"
+        },
+        "authoredOn": "2026-01-01T06:30:00Z",
+        "lastModified": "2026-01-01T06:30:00Z",
+        "owner": {
+          "display": "screening_programme"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Positive faecal immunochemical test -&gt; diagnostic colonoscopy: ISSUED</div>"
+        },
+        "restriction": {
+          "period": {
+            "end": "2026-01-08T06:30:00Z"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://loopshield.example.org/fhir/Communication/loop-sha256-3a8893bf21229195da31aab83e3a778a-alert-0",
+      "resource": {
+        "resourceType": "Communication",
+        "id": "loop-sha256-3a8893bf21229195da31aab83e3a778a-alert-0",
+        "status": "preparation",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alert level 0 to navigator; delivery not confirmed</div>"
+        },
+        "partOf": [
+          {
+            "reference": "Task/loop-sha256-3a8893bf21229195da31aab83e3a778a"
+          }
+        ],
+        "recipient": [
+          {
+            "display": "navigator"
+          }
+        ],
+        "note": [
+          {
+            "text": "alert raised by the engine at 2026-01-02T06:30:00Z; delivery not confirmed"
+          }
+        ],
+        "payload": [
+          {
+            "contentString": "escalation level 0 (callback_requested) at step NOTIFIED"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://loopshield.example.org/fhir/Provenance/loop-sha256-3a8893bf21229195da31aab83e3a778a-provenance",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "loop-sha256-3a8893bf21229195da31aab83e3a778a-provenance",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Recorded by the LoopShield engine</div>"
+        },
+        "target": [
+          {
+            "reference": "Task/loop-sha256-3a8893bf21229195da31aab83e3a778a"
+          }
+        ],
+        "recorded": "2026-01-01T06:30:00Z",
+        "agent": [
+          {
+            "who": {
+              "display": "LoopShield engine"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

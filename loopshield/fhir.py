@@ -12,7 +12,9 @@ Plain dictionaries, no FHIR library. Scenario bundles pass the official HL7 FHIR
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import html
+import re
 
 TASK_STATUS = {"ISSUED": "requested", "NOTIFIED": "received", "ACKNOWLEDGED": "accepted",
                "REFERRED": "in-progress", "REFERRAL_ACCEPTED": "in-progress", "BOOKED": "in-progress",
@@ -29,14 +31,30 @@ def _narrative(text: str) -> dict:
 
 
 def _iso(origin: dt.datetime, days: float) -> str:
-    return (origin + dt.timedelta(days=days)).replace(microsecond=0).isoformat() + "Z"
+    # Engine time is elapsed days from the origin. Naive origins retain the existing UTC convention.
+    utc = origin.replace(tzinfo=dt.timezone.utc) if origin.utcoffset() is None else origin.astimezone(dt.timezone.utc)
+    return (utc + dt.timedelta(days=days)).isoformat().replace("+00:00", "Z")
+
+
+def _resource_stem(case_id: str) -> str:
+    """Keep short safe case IDs; derive bounded opaque IDs for everything else.
+
+    Reserve the sha256- namespace so a literal case ID cannot alias an encoded one. A deployment must
+    still use pseudonymous case IDs: the hash is an identifier encoding, not an anonymisation claim.
+    """
+    if not isinstance(case_id, str):
+        raise ValueError("FHIR export needs a string case_id")
+    if re.fullmatch(r"[A-Za-z0-9-.]{1,40}", case_id) and not case_id.startswith("sha256-"):
+        return "loop-" + case_id
+    return "loop-sha256-" + hashlib.sha256(case_id.encode("utf-8")).hexdigest()[:32]
 
 
 def case_bundle(case, origin: dt.datetime | None = None, patient_ref: str = "Patient/pseudonymous") -> dict:
     origin = origin or dt.datetime(2026, 1, 1)
+    stem = _resource_stem(case.case_id)
     task = {
         "resourceType": "Task",
-        "id": f"loop-{case.case_id}",
+        "id": stem,
         "status": TASK_STATUS[case.state],
         "intent": "order",
         "priority": "urgent" if case.urgent else "routine",
@@ -56,14 +74,14 @@ def case_bundle(case, origin: dt.datetime | None = None, patient_ref: str = "Pat
     # Communications in "preparation" (created, not sent); a delivery integration must set "completed" and `sent`
     # only after confirmed delivery.
     comms = [{
-        "resourceType": "Communication", "id": f"loop-{case.case_id}-alert-{i}", "status": "preparation",
+        "resourceType": "Communication", "id": f"{stem}-alert-{i}", "status": "preparation",
         "text": _narrative(f"Alert level {e['level']} to {e['to']}; delivery not confirmed"),
         "partOf": [{"reference": f"Task/{task['id']}"}],
         "recipient": [{"display": e["to"]}],
         "note": [{"text": f"alert raised by the engine at {_iso(origin, e['t'])}; delivery not confirmed"}],
         "payload": [{"contentString": f"escalation level {e['level']} ({e['reason']}) at step {e['step']}"}],
     } for i, e in enumerate(case.escalations)]
-    prov = {"resourceType": "Provenance", "id": f"loop-{case.case_id}-provenance",
+    prov = {"resourceType": "Provenance", "id": f"{stem}-provenance",
             "text": _narrative("Recorded by the LoopShield engine"), "target": [{"reference": f"Task/{task['id']}"}],
             "recorded": _iso(origin, case.entered_at),
             "agent": [{"who": {"display": "LoopShield engine"}}]}

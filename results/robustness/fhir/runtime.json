@@ -1,0 +1,8 @@
+{
+  "source": "https://api.adoptium.net/v3/assets/latest/21/hotspot?architecture=x64&image_type=jre&os=linux&vendor=eclipse",
+  "version": "21.0.13+9.0.LTS",
+  "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jre_x64_linux_hotspot_21.0.13_9.tar.gz",
+  "sha256": "a535a1df9c6284d9618872984e026ae0352d1f7e9e0605425c0e6114f47351dd",
+  "size": 52181297,
+  "name": "OpenJDK21U-jre_x64_linux_hotspot_21.0.13_9.tar.gz"
+}
