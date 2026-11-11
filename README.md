@@ -17,6 +17,10 @@ result below comes from real patients.
 
 **Contents** — [The problem](#the-problem) · [Background](#background) · [What it does](#what-it-does) · [Quick start](#quick-start) · [Results](#results) · [Repository](#repository) · [Limitations](#limitations) · [Real-world applications](#real-world-applications) · [Possible improvements](#possible-improvements) · [Future work](#future-work) · [Licence](#licence) · [Bibliography](#bibliography)
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> Explicit ownership, deadlines and evidence-backed closure turn scattered screening follow-ups into auditable cases. FHIR exports and local identifier masking can reduce repeated coordination and unnecessary disclosure before optional message drafting. The <a href="#what-it-does">documented workflow</a> provides reusable handoff and escalation mechanisms; reductions in staff workload or missed care still require live evaluation because the current evidence uses synthetic cases and simulation.</sub>
+<!-- impact-note:end -->
+
 ## The problem
 
 <p align="center"><img src="docs/readme/01-problem.gif" alt="A positive result crossing four organisations, with the hand-offs where it is lost" width="100%"><br><sub>Fig. 1 — Where the loop breaks. Sources: docs/SOURCES.md (Callen 2012, Chubak 2016, Corley 2017).</sub></p>
